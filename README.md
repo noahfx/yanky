@@ -1,4 +1,4 @@
-# yanky -- Easy and Simple copy and paste module for GNU/Linux systems
+# yanky -- Easy and Simple copy and paste Python module for GNU/Linux systems
 
 In order to get yanky fully functional either one of the following software
 needs to be installed in your system:
