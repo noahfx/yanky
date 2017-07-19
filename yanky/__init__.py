@@ -9,7 +9,7 @@ def _subprocess_copy(text, args_list):
     p = subprocess.Popen(args_list, stdin=subprocess.PIPE, close_fds=True)
     p.communicate(input=text.encode('utf-8'))
 
-def _subprocess_paste(text, args_list):
+def _subprocess_paste(args_list):
     p = subprocess.Popen(args_list, stdout=subprocess.PIPE, close_fds=True)
     out, err = p.communicate()
     return out.decode('utf-8')
@@ -53,4 +53,4 @@ def paste():
     cmd_name = get_command_name()
     if cmd_name is None:
         raise Exception("xsel or xclip is not installed")
-    return _subprocess_paste(text, cmd_args.get(cmd_name))
+    return _subprocess_paste(cmd_args.get(cmd_name))
