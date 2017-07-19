@@ -3,9 +3,6 @@ import os
 import platform
 import subprocess
 
-class PlatformNotSuppored(Exception):
-    pass
-
 is_linux = lambda : os.name == 'posix' or platform.system() == 'Linux'
 
 def _subprocess_copy(text, args_list):
@@ -36,7 +33,7 @@ def copy(text):
     """
 
     if not is_linux():
-        raise PlatformNotSuppored('Operative System not supported')
+        raise OSError('Operative System not supported')
     cmd_args = {'xsel' : ['xsel', '-b', '-i'],
                 'xclip' : ['xclip', '-selection', 'c']}
     cmd_name = get_command_name()
@@ -50,7 +47,7 @@ def paste():
     """
 
     if not is_linux():
-        raise PlatformNotSuppored('Operative System not supported')
+        raise OSError('Operative System not supported')
     cmd_args = {'xsel' : ['xsel', '-b', '-o'],
                 'xclip': ['xclip', '-selection', '-o']}
     cmd_name = get_command_name()
