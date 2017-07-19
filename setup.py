@@ -1,0 +1,27 @@
+from setuptools import setup, find_packages
+setup(
+    name='yanky',
+    version='0.9.0',
+    packages=['yanky'],
+    package_data={'': ['LICENSE']},
+    package_dir={'yanky': 'yanky'},
+    author='Josue Ortega',
+    author_email='josueortega@protonmail.ch',
+    description='Easy and Simple copy and paste module for GNU/Linux systems',
+    long_description=open('README', 'rt').read(),
+    license='MIT',
+    keywords='yannk copy paste api xsel xclip clipboard',
+    url='https://github.com/noahfx/yanky',
+    classifiers = [
+        'Development Status :: 3 - Alpha',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: POSIX',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.1',
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Intended Audience :: Developers',
+    ],
+)
