@@ -7,6 +7,13 @@ needs to be installed in your system:
  
  In Debian based systems they can be installed via the package manager.
  
+ ## Installation 
+ ```
+ $ sudo pip install yanky
+ 
+ ```
+ Package available for Python 3 only. 
+ 
 Usage:
 
 ```
